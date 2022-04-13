@@ -6,6 +6,8 @@ The available entities are: Category, Advertisement and User.
 
 The supported HTTP Operations are GET and POST.
 
+In order to make the endpoint calls you can use Postman : https://www.postman.com/downloads/
+
 This table shows the endpoint calls that can be made to the application and the values of the HTTP Responses:
 
 | Endpoint      | HTTP Operation | Returns       |
