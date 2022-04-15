@@ -39,6 +39,8 @@ public class UserService {
   }
 
   public User create(User usr) {
-       return userRepository.save(usr);
+      User createdUser = userRepository.save(usr);
+      createdUser.setPassword("******");
+      return createdUser;
   }
 }
