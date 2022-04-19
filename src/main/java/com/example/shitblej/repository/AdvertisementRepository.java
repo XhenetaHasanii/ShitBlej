@@ -10,16 +10,5 @@ import org.springframework.data.repository.query.Param;
 import com.example.shitblej.model.Advertisement.Type;
 
 public interface AdvertisementRepository extends JpaRepository<Advertisement, Long> {
-  @Query(value = "SELECT a FROM Advertisement a "
-      + "WHERE (:type IS NULL OR a.type = :type )"
-      + "AND (:category IS NULL OR a.category = :category) "
-      + "AND (:priceFrom IS NULL OR a.price >= :priceFrom) "
-      + "AND (:priceTo IS NULL OR a.price <= :priceTo)")
-  Page<Advertisement> findByFiltersPaged(
-      @Param("type") Type type,
-      @Param("category") Category category,
-      @Param("priceFrom") Integer priceFrom,
-      @Param("priceTo") Integer priceTo,
-      Pageable pageable
-  );
+
 }
